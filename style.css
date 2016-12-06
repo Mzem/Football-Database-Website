@@ -1,0 +1,236 @@
+body{
+    background: url('img/pitch.jpg') top center;
+	background-size: cover;
+	background-attachment: fixed;
+    margin:0;
+	
+    font-family: Calibri, Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+/*header*/
+header{
+	position: fixed; /*barre de menu toujours visible */
+	width: 100%;
+	top: 0px;
+    background-color: #000000;
+	border-bottom: 5px solid white;
+    display: flex;
+    justify-content: space-between;
+	text-transform: uppercase;
+}
+	#logo{
+		display: flex;
+		align-items: center;
+	}
+	#logo img{
+		width: 8%;
+		height: 60%;
+		padding: 3%;
+		padding-right: 5%;
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		padding-right: 3%;	
+	}
+	nav ul{
+		list-style-type: none;
+		display: flex;
+	}
+	nav li{
+		margin-right: 15px;
+	}
+	nav .actuel a{
+		border-bottom: 3px solid white;
+	}
+	nav a{
+		font-size: 1.4em;
+		color: white;
+		padding-bottom: 3px;
+		text-decoration: none;
+	}
+	nav a:hover{
+		color: #760001;
+		border-bottom: 3px solid #760001;
+	}
+	nav a img{
+		border: 2px solid white;
+	}	
+	nav a img:hover{
+		border: 2px solid #760001;
+	}
+	
+/*page acceuil*/
+#bloc_acceuil section{
+	margin-left: 33%;
+	margin-right: 33%;
+	margin-top: 12%;
+	margin-bottom: 7%
+}
+	#bloc_acceuil #champ_recherche img{
+		display: block;
+		margin: auto;
+	}
+	#bloc_acceuil #champ_recherche form{
+		background-color: rgba(118,0,1,0.7);;
+		box-shadow: 0px 2px 5px #1c1a19;
+		border-radius: 5px;
+		
+		margin-top: 7%;
+		padding: 5%;
+		color: white;
+		font-size: 0.9em;
+		text-align: center;
+	}
+	#bloc_acceuil #champ_recherche form h2{
+		text-shadow: black 1px 1px, black -1px 1px, black -1px -1px, black 1px -1px;
+	}
+	#element_acceuil{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 5%;
+		padding-top: 8%;
+		align-items: center;
+	}
+	#element_acceuil img{
+		width: 75%;
+		height: 50%;
+		max-width: 150px;
+	}
+
+/*page espaceMembres*/
+#bloc_espaceMembre section{
+	margin: 33%;
+	margin-top: 11%;
+}
+#bloc_espaceMembre #formulaire, #gestion{
+	background-color: rgba(118,0,1,0.7);;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	
+	padding: 5%;
+	color: white;
+	font-size: 0.9em;
+	text-align: center;
+}
+#bloc_espaceMembre #formulaire, #gestion h2{
+	text-shadow: black 1px 1px, black -1px 1px, black -1px -1px, black 1px -1px;
+}
+#bloc_espaceMembre #formulaire img{
+	max-width: 30%;
+	max-height: 30%;
+}
+#bloc_espaceMembre #gestion a{
+	color: white;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+#bloc_espaceMembre #gestion a:hover{
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+table{
+    border-collapse: collapse;
+}
+td, th{
+    border: 1px solid rgba(255,255,255,0);
+    background-color: rgba(118,118,118,0.2);
+    box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 2px;
+    padding: 7px;
+}
+
+/*pages JOUEURS, NATIONS, CLUBS, TROPHES*/
+#options{
+	background-color: rgba(118,0,1,0.7);
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+
+	padding-left: 2%;
+	margin-right: 3%;
+	margin-bottom: 4%;
+
+	font-weight: bold; 
+}
+
+#options select, input{
+	margin-right: 3%;
+}
+#options a img{
+	height: 1.7%;
+	width: 1.7%;
+	position: relative;
+	top: 5px;
+}
+#pages_daffichage section{
+	display: flex;
+	margin-top: 140px;
+	margin-left: 8%;
+	flex-direction: column;
+	justify-content: felx-start;
+}
+	section #element_page{
+		margin-bottom: 5%;
+		display: flex;
+		align-items: center;
+		text-shadow: black 1px 1px, black -1px 1px, black -1px -1px, black 1px -1px;
+	}	
+	section #element_page img{
+		width: 13%;
+		height: 70%;
+		margin-right: 5%;
+	}
+	section #element_page p{
+		color: black;
+		text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
+		font-size: 210%;
+		width: 200px;
+	}
+	#element_page .listing{
+		display: flex;
+		flex-direction: column;
+		margin-left: 7%;
+		width: 250px;
+	}
+	#element_page .listing img{
+		width: 20%;
+		height: 70%;
+		margin-bottom: 1%;
+		float: left;
+	}	
+	#element_page .listing_palmares{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 5%;
+		align-items: center;
+	}
+	#element_page .listing_palmares img{
+		width: 50%;
+		height: 50%;
+		max-width: 150px;
+		float: bottom;
+	}
+	#element_page a{
+		font-size: 0.7em;
+		color: black;
+		padding-bottom: 3px;
+		text-decoration: none;
+	}
+	#element_page a:hover{
+		color: #760001;
+	}
+	
+	
+	
+/*footer*/
+footer{
+	text-align: center;
+	font-size: 1.2em;
+	margin-top: 50%;
+	margin-bottom: 1%;
+}
