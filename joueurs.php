@@ -1,13 +1,6 @@
 <?php
 	session_start();
 
-	try{
-		$bdd = new PDO('mysql:host=localhost;dbname=Football;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-	}
-	catch (Exception $e){
-			die('Erreur : ' . $e->getMessage());
-	}
-
 	//Fonction pour l'affichage de la liste des joueurs
 	function afficher($req, $bdd)
 	{
@@ -98,6 +91,7 @@
 		<link rel="icon" href="img/favicon.png" />
     </head>
 	
+	<?php include("bdd.php");?>
 	
     <body>
 		
@@ -111,7 +105,7 @@
 					
 				<nav>
 						<ul>
-							<li><a href="acceuil.php">Acceuil</a></li>
+							<li><a href="index.php">Acceuil</a></li>
 							<li class="actuel"><a href="joueurs.php">Joueurs</a></li>
 							<li><a href="nations.php">Nations</a></li>
 							<li><a href="clubs.php">Clubs</a></li>

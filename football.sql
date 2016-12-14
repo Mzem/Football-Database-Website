@@ -675,7 +675,7 @@ DROP TABLE IF EXISTS palmaresClub;
 CREATE VIEW palmaresClub
 AS SELECT P.club, P.trophe, P.annee FROM palmares P WHERE P.type = "club" GROUP BY P.club, P.trophe, P.annee ORDER BY P.club, P.trophe, P.annee;
 
-DROP TABLE IF EXISTS palmaresClub;
+DROP TABLE IF EXISTS palmaresPays;
 
 CREATE VIEW palmaresPays
 AS	SELECT DISTINCT R.trophe AS trophe, R.annee AS annee, Jr.pays AS pays 
@@ -683,5 +683,23 @@ AS	SELECT DISTINCT R.trophe AS trophe, R.annee AS annee, Jr.pays AS pays
 	WHERE R.trophe = T.id
 	AND R.joueur = Jr.id 
 	AND T.type = "pays" 
-	ORDER BY Jr.pays, R.trophe, R.annee
+	ORDER BY Jr.pays, R.trophe, R.annee;
+	
+
+--
+-- Utilisateurs des bases de données
+--
+CREATE USER IF NOT EXISTS 'Invite'@'localhost' IDENTIFIED BY 'invite';
+
+GRANT SELECT ON football.* TO 'Invite'@'localhost';
+GRANT INSERT ON football.utilisateurs TO 'Invite'@'localhost';
+
+CREATE USER IF NOT EXISTS 'Normal'@'localhost' IDENTIFIED BY 'normal';
+
+GRANT SELECT ON football.* TO 'Normal'@'localhost';
+GRANT UPDATE, INSERT ON football.utilisateurs TO 'Normal'@'localhost';
+
+CREATE USER IF NOT EXISTS 'Admin'@'localhost' IDENTIFIED BY 'admin';
+
+GRANT SELECT, UPDATE, INSERT ON football.* TO 'Admin'@'localhost';
 	

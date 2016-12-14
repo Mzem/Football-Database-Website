@@ -11,14 +11,7 @@
 		<link rel="icon" href="img/favicon.png" />
     </head>
     
-	<?php
-		try{
-			$bdd = new PDO('mysql:host=localhost;dbname=Football;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		}
-		catch (Exception $e){
-				die('Erreur : ' . $e->getMessage());
-		}
-	?>
+	<?php include("bdd.php");?>
 	
     <body>
 		
@@ -31,7 +24,7 @@
 					
 				<nav>
 						<ul>
-							<li><a href="acceuil.php">Acceuil</a></li>
+							<li><a href="index.php">Acceuil</a></li>
 							<li><a href="joueurs.php">Joueurs</a></li>
 							<li><a href="nations.php">Nations</a></li>
 							<li><a href="clubs.php">Clubs</a></li>
@@ -221,7 +214,7 @@
 							<br/>
 
 							<!-- Déconnection -->
-							<form method="post" action="acceuil.php">
+							<form method="post" action="index.php">
 								<input type="submit" value="Déconnection" name="deconnection"/>
 							</form>
 							
